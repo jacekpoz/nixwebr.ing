@@ -26,3 +26,13 @@ a:link {
 a:visited {
     color: #5075BF;
 }
+
+code {
+    background-color: #333333;
+    padding: 1px;
+    border-radius: 3px;
+}
+
+pre:has(code) code {
+    display: block;
+}
