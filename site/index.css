@@ -17,6 +17,8 @@ body {
     flex-direction: column;
     margin: 0;
     height: 100%;
+    max-width: 80ch;
+    padding-bottom: 2em;
 }
 
 a:link {
@@ -35,4 +37,17 @@ code {
 
 pre:has(code) code {
     display: block;
+}
+
+p {
+    margin: 1em auto 1em;
+}
+
+ul {
+    list-style-position: inside;
+    padding-bottom: 1em;
+}
+
+li {
+    margin-left: 2em;
 }
