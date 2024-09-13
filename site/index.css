@@ -21,10 +21,6 @@ body {
     margin: 1em auto 1em;
 }
 
-a {
-    display: block;
-}
-
 a:link {
     color: #7EB6E1;
 }
