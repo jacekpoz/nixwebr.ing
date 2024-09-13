@@ -1,0 +1,17 @@
+name: Deploy website
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'front/**'
+      - '.forgejo/workflows/deploy-front.yaml'
+
+jobs:
+  deploy:
+    runs-on: native
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          nix build -L .#site -o /srv/web/nixwebr.ing

@@ -1,0 +1,10 @@
+[package]
+name = "nix-webring-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+env_logger = "0.11.3"
+ntex = { version = "2.0.0", features = [ "tokio", "rustls" ] }
+ntex-files = "2.0.0"
+rand = "0.8.5"
