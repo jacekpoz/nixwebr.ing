@@ -54,10 +54,15 @@
         <p>
           and make a PR to one of <a href="https://codeberg.org/jacekpoz/nixwebr.ing">the</a> <a href="https://github.com/jacekpoz/nixwebr.ing">repos</a> adding yourself to the <code>webring.nix</code> file:
           <br>
-          <code>{ name = "name"; domain = "mysite.tld"; }</code>
+          <pre><code>
+            { name = "name"; domain = "mysite.tld"; }
+          </code></pre>
           <br>
           feel free to also link your nixos configuration in the PR!
-          <br>
+        </p>
+
+        ${h2 "support"}
+        <p>
           if you don't know how to / can't make a PR for some reason feel free to <a href="https://jacekpoz.pl">contact me</a>, I can add you to the webring myself
         </p>
       </body>
