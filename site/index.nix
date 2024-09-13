@@ -24,7 +24,7 @@
         
         <div id="logo-and-name-and-shit">
           <h1>nix webring</h1>
-          <img src="/nix-webring.svg">
+          <img src="/nix-webring.svg" alt="nix webring logo">
         </div>
 
         ${h2 "webring members"}
