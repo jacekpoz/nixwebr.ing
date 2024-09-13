@@ -43,14 +43,14 @@
         ${h2 "joining"}
         <p>
           to join, have a personal website (bonus points if it uses nix!) and add the following links to it (they have to be on the main page):
-          <br>
-          <ul>
-            <li>webring site: <code>https://nixwebr.ing</code></li>
-            <li>next site: <code>https://nixwebr.ing/next/&lt;name&gt;</code></li>
-            <li>previous site: <code>https://nixwebr.ing/prev/&lt;name&gt;</code></li>
-            <li>random site (optional): <code>https://nixwebr.ing/rand</code></li>
-          </ul>
-          <br>
+        </p>
+        <ul>
+          <li>webring site: <code>https://nixwebr.ing</code></li>
+          <li>next site: <code>https://nixwebr.ing/next/&lt;name&gt;</code></li>
+          <li>previous site: <code>https://nixwebr.ing/prev/&lt;name&gt;</code></li>
+          <li>random site (optional): <code>https://nixwebr.ing/rand</code></li>
+        </ul>
+        <p>
           and make a PR to one of <a href="https://codeberg.org/jacekpoz/nixwebr.ing">the</a> <a href="https://github.com/jacekpoz/nixwebr.ing">repos</a> adding yourself to the <code>webring.nix</code> file:
           <br>
           <code>{ name = "name"; domain = "mysite.tld"; }</code>
