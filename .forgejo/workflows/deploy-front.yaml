@@ -3,7 +3,7 @@ name: Deploy website
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'site/**'
       - '.forgejo/workflows/deploy-front.yaml'
