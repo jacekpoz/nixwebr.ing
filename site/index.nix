@@ -8,6 +8,7 @@
   format = "html";
 
   output = /*html*/''
+    <!DOCTYPE html>
     <html lang="en">
       <head>
         <title>nix webring</title>
