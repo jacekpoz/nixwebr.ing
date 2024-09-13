@@ -41,7 +41,6 @@ pre:has(code) code {
 
 ul {
     list-style-position: inside;
-    padding-bottom: 1em;
 }
 
 li {
