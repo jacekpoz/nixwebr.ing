@@ -69,7 +69,7 @@ in {
           <br>
           <pre><code>
      { name = "name"; domain = "mysite.tld"; config = "gitforge.tld/name/nixos"; }
-          </code></pre>
+    </code></pre>
           <br>
           linking your nixos config is entirely optional! (you'll be way cooler though)
         </p>
