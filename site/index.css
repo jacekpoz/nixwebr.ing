@@ -19,3 +19,11 @@ body {
     margin: 0;
     height: 100%;
 }
+
+a:link {
+    color: #7EB6E1;
+}
+
+a:visited {
+    color: #5075BF;
+}

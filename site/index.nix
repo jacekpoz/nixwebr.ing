@@ -1,4 +1,9 @@
-_: {
+{
+  h2,
+  pkgs,
+  webringMembers,
+  ...
+}: {
   template = "passthrough";
   format = "html";
 
@@ -15,6 +20,14 @@ _: {
       </head>
       <body>
         <p>work in progress</p>
+        ${h2 "webring members"}
+        <ul>
+          ${pkgs.lib.concatStrings (map (member: /*html*/''
+            <li>
+              <a href="https://${member.domain}">${member.name}</a>
+            </li>
+          '') webringMembers)}
+        </ul>
       </body>
     </html>
   '';

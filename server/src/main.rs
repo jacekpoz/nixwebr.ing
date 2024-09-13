@@ -1,15 +1,24 @@
-mod members;
+use std::fs::{self};
 
-use members::WEBRING_MEMBERS;
 use ntex::{http::{header, Response}, web::{self, middleware}};
 use ntex_files as nfs;
 use ::rand::{thread_rng, Rng};
+use serde::{Deserialize, Serialize};
+
+#[derive(Clone, Serialize, Deserialize)]
+struct WebringMember {
+    name: String,
+    domain: String,
+}
 
 #[web::get("/next/{name}")]
-async fn next(name: web::types::Path<String>) -> impl web::Responder {
-    if let Some((i, _)) = WEBRING_MEMBERS.iter().enumerate().find(|(_, member)| member.name == *name) {
-        let next_index = (i + 1) % WEBRING_MEMBERS.len();
-        let next_domain = WEBRING_MEMBERS[next_index].domain;
+async fn next(
+    members: web::types::State<Vec<WebringMember>>,
+    name: web::types::Path<String>,
+) -> impl web::Responder {
+    if let Some((i, _)) = members.iter().enumerate().find(|(_, member)| member.name == *name) {
+        let next_index = (i + 1) % members.len();
+        let next_domain = &members[next_index].domain;
         let next_url = format!("https://{next_domain}/");
 
         return Response::PermanentRedirect()
@@ -23,10 +32,13 @@ async fn next(name: web::types::Path<String>) -> impl web::Responder {
 }
 
 #[web::get("/prev/{name}")]
-async fn prev(name: web::types::Path<String>) -> impl web::Responder {
-    if let Some((i, _)) = WEBRING_MEMBERS.iter().enumerate().find(|(_, member)| member.name == *name) {
-        let prev_index = if i == 0 { WEBRING_MEMBERS.len() - 1 } else { i - 1 };
-        let prev_domain = WEBRING_MEMBERS[prev_index].domain;
+async fn prev(
+    members: web::types::State<Vec<WebringMember>>,
+    name: web::types::Path<String>,
+) -> impl web::Responder {
+    if let Some((i, _)) = members.iter().enumerate().find(|(_, member)| member.name == *name) {
+        let prev_index = if i == 0 { members.len() - 1 } else { i - 1 };
+        let prev_domain = &members[prev_index].domain;
         let prev_url = format!("https://{prev_domain}/");
 
         return Response::PermanentRedirect()
@@ -40,9 +52,11 @@ async fn prev(name: web::types::Path<String>) -> impl web::Responder {
 }
 
 #[web::get("/rand")]
-async fn rand() -> impl web::Responder {
-    let rand_index = thread_rng().gen_range(0..WEBRING_MEMBERS.len());
-    let rand_domain = WEBRING_MEMBERS[rand_index].domain;
+async fn rand(
+    members: web::types::State<Vec<WebringMember>>,
+) -> impl web::Responder {
+    let rand_index = thread_rng().gen_range(0..members.len());
+    let rand_domain = &members[rand_index].domain;
     let rand_url = format!("https://{rand_domain}/");
 
     Response::PermanentRedirect()
@@ -64,8 +78,16 @@ async fn main() -> std::io::Result<()> {
         .expect("NIX_WEBRING_PORT has to be u16");
 
     web::server(move || {
+        let path = format!("{nix_webring_dir}/webring.json");
+        let json = fs::read_to_string(&path)
+            .expect(&format!("couldn't open {path}"));
+
+        let members: Vec<WebringMember> = serde_json::from_str(&json)
+            .expect(&format!("failed deserializing webring members: {json}"));
+
         web::App::new()
             .wrap(middleware::Logger::default())
+            .state(members)
             .service(
                 web::scope("/")
                     .service(next)

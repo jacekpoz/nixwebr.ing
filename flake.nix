@@ -13,14 +13,16 @@
   outputs = { nixpkgs, nte, self, systems, ... }: let
     forEachSystem = nixpkgs.lib.genAttrs (import systems);
     pkgsForEach = nixpkgs.legacyPackages;
+
+    webringMembers = import ./webring.nix;
   in {
     packages = forEachSystem (
       system: let
         pkgs = pkgsForEach.${system};
       in {
         site = import ./site/default.nix {
-          inherit pkgs;
-          inherit (pkgs) jetbrains-mono lib;
+          inherit pkgs webringMembers;
+          inherit (pkgs) jetbrains-mono lib writeText;
           inherit (nte.functions.${system}) mkNteDerivation;
         };
         server = import ./server/default.nix {
