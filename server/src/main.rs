@@ -47,6 +47,7 @@ async fn rand() -> impl web::Responder {
 
     Response::PermanentRedirect()
         .header(header::LOCATION, rand_url)
+        .header(header::CACHE_CONTROL, "no-store")
         .take()
 }
 
