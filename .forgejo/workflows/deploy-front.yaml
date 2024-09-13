@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'front/**'
+      - 'site/**'
       - '.forgejo/workflows/deploy-front.yaml'
 
 jobs:
