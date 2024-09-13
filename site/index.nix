@@ -3,7 +3,13 @@
   pkgs,
   webringMembers,
   ...
-}: {
+}: let
+  inherit (pkgs) lib;
+
+  inherit (lib.attrsets) hasAttr;
+  inherit (lib.lists) map;
+  inherit (lib.strings) concatStrings optionalString;
+in {
   template = "passthrough";
   format = "html";
 
@@ -29,9 +35,16 @@
 
         ${h2 "webring members"}
         <ul>
-          ${pkgs.lib.concatStrings (map (member: /*html*/''
+          ${concatStrings (map (member: let
+            hasConfig = hasAttr "config" member;
+          in /*html*/''
             <li>
-              <a href="https://${member.domain}">${member.name}</a>
+              <div class="webring-member">
+                <a href="https://${member.domain}">${member.name}</a>
+                ${optionalString hasConfig /*html*/''
+                  <a href="https://${member.config}"><img class="config-image" src="/nix.svg" alt="their nixos config"></a>
+                ''}
+              </div>
             </li>
           '') webringMembers)}
         </ul>
@@ -55,10 +68,10 @@
           and make a PR to one of <a href="https://codeberg.org/jacekpoz/nixwebr.ing">the</a> <a href="https://github.com/jacekpoz/nixwebr.ing">repos</a> adding yourself to the <code>webring.nix</code> file:
           <br>
           <pre><code>
-            { name = "name"; domain = "mysite.tld"; }
+     { name = "name"; domain = "mysite.tld"; config = "gitforge.tld/name/nixos"; }
           </code></pre>
           <br>
-          feel free to also link your nixos configuration in the PR!
+          linking your nixos config is entirely optional! (you'll be way cooler though)
         </p>
 
         ${h2 "support"}

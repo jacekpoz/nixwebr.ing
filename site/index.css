@@ -21,6 +21,11 @@ body {
     margin: 1em auto 1em;
 }
 
+p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
 a:link {
     color: #7EB6E1;
 }
@@ -41,14 +46,31 @@ pre:has(code) code {
 
 ul {
     list-style-position: inside;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 li {
-    margin-left: 2em;
+    margin-left: 1.5em;
+}
+
+li:not(:last-child) {
+    margin-bottom: 0.5em;
 }
 
 #logo-and-name-and-shit {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.webring-member {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.config-image {
+    margin-left: 0.25em;
+    max-height: 1.25em;
 }
