@@ -50,7 +50,9 @@
             <li>previous site: <code>https://nixwebr.ing/prev/&lt;name&gt;</code></li>
             <li>random site (optional): <code>https://nixwebr.ing/rand</code></li>
           </ul>
-          and make a PR to one of <a href="https://codeberg.org/jacekpoz/nixwebr.ing">the</a> <a href="https://github.com/jacekpoz/nixwebr.ing">repos</a>
+          and make a PR to one of <a href="https://codeberg.org/jacekpoz/nixwebr.ing">the</a> <a href="https://github.com/jacekpoz/nixwebr.ing">repos</a> adding yourself to the <code>webring.nix</code> file:
+          <br>
+          <code>{ name = "name"; domain = "mysite.tld"; }</code>
           <br>
           feel free to also link your nixos configuration in the PR!
           <br>
