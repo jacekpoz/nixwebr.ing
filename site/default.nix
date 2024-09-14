@@ -11,7 +11,7 @@
   inherit (lib.strings) replaceStrings toLower;
 
   h = n: content: let
-    id = replaceStrings [" " ";"] ["-" "-"] (toLower content);
+    id = replaceStrings [" " ";" "?"] ["-" "-" ""] (toLower content);
   in /*html*/''
     <h${toString n} id="${id}"><a href="#${id}">#</a> ${content}</h${toString n}>
   '';
