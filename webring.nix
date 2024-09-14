@@ -4,4 +4,5 @@
     { name = "partywumpus"; domain = "partywump.us"; config = "nix.partywump.us"; }
     { name = "notashelf"; domain = "notashelf.dev"; config = "github.com/NotAShelf/nyx"; }
     { name = "twig"; domain = "imnottwig.github.io"; config = "git.disroot.org/twigthecat/nixos"; }
+    { name = "fufexan"; domain = "fufexan.net"; config = "dots.fufexan.net"; }
 ]
