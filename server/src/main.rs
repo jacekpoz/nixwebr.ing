@@ -23,11 +23,13 @@ async fn next(
 
         return Response::PermanentRedirect()
             .header(header::LOCATION, next_url)
+            .header(header::CACHE_CONTROL, "no-store")
             .take();
     }
 
     Response::TemporaryRedirect()
         .header(header::LOCATION, "https://nixwebr.ing/")
+        .header(header::CACHE_CONTROL, "no-store")
         .take()
 }
 
@@ -43,11 +45,13 @@ async fn prev(
 
         return Response::PermanentRedirect()
             .header(header::LOCATION, prev_url)
+            .header(header::CACHE_CONTROL, "no-store")
             .take();
     }
 
     Response::TemporaryRedirect()
         .header(header::LOCATION, "https://nixwebr.ing/")
+        .header(header::CACHE_CONTROL, "no-store")
         .take()
 }
 
