@@ -24,6 +24,7 @@ in {
         <meta property="og:image" content="https://jacekpoz.pl/nix-webring.svg">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://nixwebr.ing">
+        <script defer data-domain="nixwebr.ing" src="https://plausible.jacekpoz.pl/js/script.js"></script>
       </head>
       <body>
         <p>work in progress</p>
