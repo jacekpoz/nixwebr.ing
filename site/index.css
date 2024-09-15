@@ -70,6 +70,10 @@ li:not(:last-child) {
     align-items: center;
 }
 
+.webring-member:has(a) a {
+    display: grid;
+}
+
 .config-image {
     margin-left: 0.25em;
     max-height: 1.25em;
