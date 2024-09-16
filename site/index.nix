@@ -41,7 +41,7 @@ in {
           in /*html*/''
             <li>
               <div class="webring-member">
-                <a href="https://${member.domain}">${member.name}</a>
+                <a href="https://${member.site}">${member.name}</a>
                 ${optionalString hasConfig /*html*/''
                   <a href="https://${member.config}"><img class="config-image" src="/nix.svg" alt="their nixos config"></a>
                 ''}
@@ -68,7 +68,7 @@ in {
         <p>
           and make a PR to one of <a href="https://codeberg.org/jacekpoz/nixwebr.ing">the</a> <a href="https://github.com/jacekpoz/nixwebr.ing">repos</a> adding yourself to the <code>webring.nix</code> file:
           <br>
-          <code>{ name = "name"; domain = "mysite.tld"; config = "gitforge.tld/name/nixos"; }</code>
+          <code>{ name = "name"; site = "mysite.tld"; config = "gitforge.tld/name/nixos"; }</code>
           <br>
           linking your nixos config is entirely optional! (you'll be way cooler though)
         </p>
