@@ -6,4 +6,5 @@
     { name = "twig"; site = "https://imnottwig.github.io"; config = "https://git.disroot.org/twigthecat/nixos"; }
     { name = "fufexan"; site = "https://fufexan.net"; config = "https://dots.fufexan.net"; }
     { name = "orangc"; site = "https://orangc.xyz"; config = "https://github.com/orxngc/dots"; }
+    { name = "ayats"; site = "https://ayats.org/experiments"; config = "https://github.com/viperML/dotfiles"; }
 ]
