@@ -8,7 +8,7 @@ use serde::{Deserialize, Serialize};
 #[derive(Clone, Serialize, Deserialize)]
 struct WebringMember {
     name: String,
-    domain: String,
+    site: String,
 }
 
 #[web::get("/next/{name}")]
@@ -18,8 +18,8 @@ async fn next(
 ) -> impl web::Responder {
     if let Some((i, _)) = members.iter().enumerate().find(|(_, member)| member.name == *name) {
         let next_index = (i + 1) % members.len();
-        let next_domain = &members[next_index].domain;
-        let next_url = format!("https://{next_domain}/");
+        let next_site = &members[next_index].site;
+        let next_url = format!("https://{next_site}/");
 
         return Response::PermanentRedirect()
             .header(header::LOCATION, next_url)
@@ -40,8 +40,8 @@ async fn prev(
 ) -> impl web::Responder {
     if let Some((i, _)) = members.iter().enumerate().find(|(_, member)| member.name == *name) {
         let prev_index = if i == 0 { members.len() - 1 } else { i - 1 };
-        let prev_domain = &members[prev_index].domain;
-        let prev_url = format!("https://{prev_domain}/");
+        let prev_site = &members[prev_index].site;
+        let prev_url = format!("https://{prev_site}/");
 
         return Response::PermanentRedirect()
             .header(header::LOCATION, prev_url)
@@ -60,8 +60,8 @@ async fn rand(
     members: web::types::State<Vec<WebringMember>>,
 ) -> impl web::Responder {
     let rand_index = thread_rng().gen_range(0..members.len());
-    let rand_domain = &members[rand_index].domain;
-    let rand_url = format!("https://{rand_domain}/");
+    let rand_site = &members[rand_index].site;
+    let rand_url = format!("https://{rand_site}/");
 
     Response::PermanentRedirect()
         .header(header::LOCATION, rand_url)
