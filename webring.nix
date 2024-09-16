@@ -1,9 +1,9 @@
 [
-    { name = "poz"; site = "jacekpoz.pl"; config = "flake.jacekpoz.pl"; }
-    { name = "krizej"; site = "krizej.codeberg.page"; config = "git.jacekpoz.pl/krizej/nix"; }
-    { name = "partywumpus"; site = "partywump.us"; config = "nix.partywump.us"; }
-    { name = "notashelf"; site = "notashelf.dev"; config = "github.com/NotAShelf/nyx"; }
-    { name = "twig"; site = "imnottwig.github.io"; config = "git.disroot.org/twigthecat/nixos"; }
-    { name = "fufexan"; site = "fufexan.net"; config = "dots.fufexan.net"; }
-    { name = "orangc"; site = "orangc.xyz"; config = "github.com/orxngc/dots"; }
+    { name = "poz"; site = "https://jacekpoz.pl"; config = "https://flake.jacekpoz.pl"; }
+    { name = "krizej"; site = "https://krizej.codeberg.page"; config = "https://git.jacekpoz.pl/krizej/nix"; }
+    { name = "partywumpus"; site = "https://partywump.us"; config = "https://nix.partywump.us"; }
+    { name = "notashelf"; site = "https://notashelf.dev"; config = "https://github.com/NotAShelf/nyx"; }
+    { name = "twig"; site = "https://imnottwig.github.io"; config = "https://git.disroot.org/twigthecat/nixos"; }
+    { name = "fufexan"; site = "https://fufexan.net"; config = "https://dots.fufexan.net"; }
+    { name = "orangc"; site = "https://orangc.xyz"; config = "https://github.com/orxngc/dots"; }
 ]

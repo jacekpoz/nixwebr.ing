@@ -41,9 +41,9 @@ in {
           in /*html*/''
             <li>
               <div class="webring-member">
-                <a href="https://${member.site}">${member.name}</a>
+                <a href="${member.site}">${member.name}</a>
                 ${optionalString hasConfig /*html*/''
-                  <a href="https://${member.config}"><img class="config-image" src="/nix.svg" alt="their nixos config"></a>
+                  <a href="${member.config}"><img class="config-image" src="/nix.svg" alt="their nixos config"></a>
                 ''}
               </div>
             </li>

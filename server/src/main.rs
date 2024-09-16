@@ -19,10 +19,9 @@ async fn next(
     if let Some((i, _)) = members.iter().enumerate().find(|(_, member)| member.name == *name) {
         let next_index = (i + 1) % members.len();
         let next_site = &members[next_index].site;
-        let next_url = format!("https://{next_site}/");
 
         return Response::PermanentRedirect()
-            .header(header::LOCATION, next_url)
+            .header(header::LOCATION, next_site)
             .header(header::CACHE_CONTROL, "no-store")
             .take();
     }
@@ -41,10 +40,9 @@ async fn prev(
     if let Some((i, _)) = members.iter().enumerate().find(|(_, member)| member.name == *name) {
         let prev_index = if i == 0 { members.len() - 1 } else { i - 1 };
         let prev_site = &members[prev_index].site;
-        let prev_url = format!("https://{prev_site}/");
 
         return Response::PermanentRedirect()
-            .header(header::LOCATION, prev_url)
+            .header(header::LOCATION, prev_site)
             .header(header::CACHE_CONTROL, "no-store")
             .take();
     }
@@ -61,10 +59,9 @@ async fn rand(
 ) -> impl web::Responder {
     let rand_index = thread_rng().gen_range(0..members.len());
     let rand_site = &members[rand_index].site;
-    let rand_url = format!("https://{rand_site}/");
 
     Response::PermanentRedirect()
-        .header(header::LOCATION, rand_url)
+        .header(header::LOCATION, rand_site)
         .header(header::CACHE_CONTROL, "no-store")
         .take()
 }
