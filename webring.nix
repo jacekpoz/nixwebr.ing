@@ -11,4 +11,5 @@
     { name = "jappie"; site = "https://jappie.dev"; config = "https://app.radicle.xyz/nodes/git.jappie.dev/rad:z4HEZGDPknT12W4fuXc6wM3HtYTf2"; }
     { name = "vizqq"; site = "https://vizqq.cc"; config = "https://github.com/ViZiD/dotfiles"; }
     { name = "korolr"; site = "https://korolr.dev"; config = "https://github.com/korolr/nixos-config"; }
+    { name = "emo-mruczek"; site = "https://emo-mruczek.pl"; config = "https://github.com/emo-mruczek/niksos-confg"; }
 ]
