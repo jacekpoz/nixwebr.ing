@@ -14,4 +14,5 @@
     { name = "emo-mruczek"; site = "https://emo-mruczek.pl"; config = "https://github.com/emo-mruczek/niksos-confg"; }
     { name = "mat"; site = "https://allpurposem.at"; config = "https://git.allpurposem.at/mat/Computer"; }
     { name = "piecuu"; site = "https://piecuu.pl"; config = "https://git.piecuu.pl/Piecuu/nixos-flake"; }
+    { name = "cutedog5695"; site = "https://cutedog5695.me"; config = "https://github.com/CuteDog5695/nixos-config"; }
 ]
