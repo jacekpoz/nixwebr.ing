@@ -16,4 +16,5 @@
     { name = "piecuu"; site = "https://piecuu.pl"; config = "https://git.piecuu.pl/Piecuu/nixos-flake"; }
     { name = "cutedog5695"; site = "https://cutedog5695.me"; config = "https://github.com/CuteDog5695/nixos-config"; }
     { name = "bwkam"; site = "https://bwkam.github.io"; config = "https://github.com/bwkam/dots"; }
+    { name = "MarkAssPandi"; site = "https://markasspandi.pl"; config = "https://codeberg.org/MicroPanda123/nixosos"; }
 ]
