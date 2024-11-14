@@ -17,4 +17,5 @@
     { name = "bwkam"; site = "https://bwkam.github.io"; config = "https://github.com/bwkam/dots"; }
     { name = "MarkAssPandi"; site = "https://markasspandi.pl"; config = "https://codeberg.org/MicroPanda123/nixosos"; }
     { name = "satr14"; site = "https://satr14.my.id"; config = "https://github.com/SX-9/nix-conf"; }
+    { name = "pupbrained"; site = "https://pupbrained.xyz"; config = "https://git.pupbrained.xyz/pupbrained/nix-config"; }
 ]
