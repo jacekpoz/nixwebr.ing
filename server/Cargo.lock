@@ -1894,9 +1894,25 @@ checksum = "bec47e5bfd1bff0eeaf6d8b485cc1074891a197ab4225d504cb7a1ab88b02bf0"
 
 [[package]]
 name = "zasa"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e406a4941ce0c5351a09bb1d30e93744f430f80ffebcb1687f1550cff4553de4"
+dependencies = [
+ "zasa_core",
+ "zasa_derive",
+]
+
+[[package]]
+name = "zasa_core"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1bd6fe2c1435fa0bd5ab924aba1f8f18f70e87735c142ede178a4fb14f9e85ed"
+checksum = "828c3c824073e930389d33e932d376504bc88acf89be3c05bfa9bb406a09e52f"
+
+[[package]]
+name = "zasa_derive"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0f3f2e32a4c0a55c14568fee40a9ca566193d0c78d62282cb451e38f9defc5ec"
 
 [[package]]
 name = "zerocopy"

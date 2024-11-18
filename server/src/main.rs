@@ -6,31 +6,12 @@ use ntex::{
     web::{self, middleware},
 };
 use ntex_files as nfs;
-use std::collections::HashMap;
-use zasa::{
-    parser::Parser,
-    value::{normalize, Normalize, Value, ValueError},
-};
+use zasa::{parser::Parser, value::normalize, Normalize};
 
-#[derive(Clone)]
+#[derive(Clone, Normalize)]
 struct WebringMember {
     name: String,
     site: String,
-}
-
-impl Normalize for WebringMember {
-    fn normalize(value: Value) -> Result<Self, ValueError> {
-        match value {
-            Value::Object(a) => {
-                let member = WebringMember {
-                    name: a["name"].to_string(),
-                    site: a["site"].to_string(),
-                };
-                Ok(member)
-            }
-            _ => Err(ValueError::ValueNotArray),
-        }
-    }
 }
 
 #[web::get("/next/{name}")]
