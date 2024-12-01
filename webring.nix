@@ -18,4 +18,5 @@
     { name = "MarkAssPandi"; site = "https://markasspandi.nl"; config = "https://codeberg.org/MicroPanda123/nixosos"; }
     { name = "satr14"; site = "https://satr14.my.id"; config = "https://github.com/SX-9/nix-conf"; }
     { name = "pupbrained"; site = "https://pupbrained.xyz"; config = "https://git.pupbrained.xyz/pupbrained/nix-config"; }
+    { name = "adxthya"; site = "https://adxthya.github.io/"; config = "https://github.com/adxthya/nix-dotfiles"; }
 ]
