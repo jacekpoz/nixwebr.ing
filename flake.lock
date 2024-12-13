@@ -24,17 +24,17 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1726242453,
-        "narHash": "sha256-VTHc10y2gI1CVmCayzzswPQPZ4S/QIi28VKpyfS+K1M=",
+        "lastModified": 1732980092,
+        "narHash": "sha256-Y0K+BZxTnXW5rMwU5MOLTy6xMV89HhCwhWrKNNyes/Q=",
         "ref": "refs/heads/main",
-        "rev": "b1f9ff4ed5fe38973c5c16db7b8c1f6100c52a5e",
-        "revCount": 51,
+        "rev": "d5d98ae8c8b79a09cada7dbb0fdf2db8eea44487",
+        "revCount": 58,
         "type": "git",
-        "url": "https://git.jacekpoz.pl/jacekpoz/nte"
+        "url": "https://git.poz.pet/poz/nte"
       },
       "original": {
         "type": "git",
-        "url": "https://git.jacekpoz.pl/jacekpoz/nte"
+        "url": "https://git.poz.pet/poz/nte"
       }
     },
     "root": {

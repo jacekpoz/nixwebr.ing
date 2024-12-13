@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nte = {
-      url = "git+https://git.jacekpoz.pl/jacekpoz/nte";
+      url = "git+https://git.poz.pet/poz/nte";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     systems.url = "github:nix-systems/default";
