@@ -27,8 +27,6 @@ in {
         <script defer data-domain="nixwebr.ing" src="https://plausible.poz.pet/js/script.js"></script>
       </head>
       <body>
-        <p>work in progress</p>
-        
         <div id="logo-and-name-and-shit">
           <h1>nix webring</h1>
           <img src="/nix-webring.svg" alt="nix webring logo">
