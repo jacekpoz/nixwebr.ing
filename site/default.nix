@@ -1,5 +1,4 @@
 {
-  jetbrains-mono,
   lib,
   mkNteDerivation,
   webringMembers,
@@ -37,7 +36,6 @@ in mkNteDerivation {
     { source = "./index.css"; destination = "/"; }
     { source = "./nix-webring.svg"; destination = "/"; }
     { source = "./nix.svg"; destination = "/"; }
-    { source = "${jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf"; destination = "/"; }
     {
         source = writeText "webring.json" (builtins.toJSON webringMembers);
         destination = "/webring.json";
