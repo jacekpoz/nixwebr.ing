@@ -37,6 +37,10 @@
         shell = pkgs.mkShell {
           name = "nixwebr.ing";
 
+          packages = with pkgs; [
+            darkhttpd
+          ];
+
           inputsFrom = [ self.packages.${system}.server ];
         };
       in {
