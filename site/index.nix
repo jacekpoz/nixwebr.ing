@@ -21,7 +21,7 @@ in {
         <link rel="icon" type="image/svg" href="/nix-webring.svg">
         <link rel="stylesheet" href="/index.css">
         <meta property="og:title" content="nix webring">
-        <meta property="og:image" content="https://poz.pet/nix-webring.svg">
+        <meta property="og:image" content="https://nixwebr.ing/nix-webring.svg">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://nixwebr.ing">
         <script defer data-domain="nixwebr.ing" src="https://plausible.poz.pet/js/script.js"></script>
@@ -80,7 +80,7 @@ in {
 
         ${h2 "support"}
         <p>
-          if you don't know how to / can't make a PR for some reason feel free to <a href="https://poz.pet">contact me</a>, I can add you to the webring myself
+          if you don't know how to / can't make a PR for some reason feel free to <a href="https://poz.pet/contact.html">contact me</a>, I can add you to the webring myself
         </p>
       </body>
     </html>
