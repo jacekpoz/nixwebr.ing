@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1717602782,
-        "narHash": "sha256-pL9jeus5QpX5R+9rsp3hhZ+uplVHscNJh8n8VpqscM0=",
+        "lastModified": 1735471104,
+        "narHash": "sha256-0q9NGQySwDQc7RhAV2ukfnu7Gxa5/ybJ2ANT8DQrQrs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e8057b67ebf307f01bdcc8fba94d94f75039d1f6",
+        "rev": "88195a94f390381c6afcdaa933c2f6ff93959cb4",
         "type": "github"
       },
       "original": {
@@ -24,11 +24,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1732980092,
-        "narHash": "sha256-Y0K+BZxTnXW5rMwU5MOLTy6xMV89HhCwhWrKNNyes/Q=",
+        "lastModified": 1735499401,
+        "narHash": "sha256-NNcQqj2lRFDRKrq1OFJyMXxRuACQKEuvwUlwxo0Oe64=",
         "ref": "refs/heads/main",
-        "rev": "d5d98ae8c8b79a09cada7dbb0fdf2db8eea44487",
-        "revCount": 58,
+        "rev": "de8c7dd55f08d42d1748dcd4dfad648246383584",
+        "revCount": 62,
         "type": "git",
         "url": "https://git.poz.pet/poz/nte"
       },
