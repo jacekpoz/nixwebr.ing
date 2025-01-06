@@ -18,4 +18,5 @@
     { name = "pupbrained"; site = "https://pupbrained.xyz"; config = "https://git.pupbrained.xyz/pupbrained/nix-config"; }
     { name = "adxthya"; site = "https://adxthya.github.io/"; config = "https://github.com/adxthya/nix-dotfiles"; }
     { name = "justdeeevin"; site = "https://justdeeevin.dev"; config = "https://github.com/justdeeevin/nix-config"; }
+    { name = "theholytachanka"; site = "https://theholytachanka.com"; config = "https://github.com/ilovethensa/homelab"; }
 ]
