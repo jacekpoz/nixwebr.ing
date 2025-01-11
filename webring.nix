@@ -19,4 +19,5 @@
     { name = "adxthya"; site = "https://adxthya.github.io/"; config = "https://github.com/adxthya/nix-dotfiles"; }
     { name = "justdeeevin"; site = "https://justdeeevin.dev"; config = "https://github.com/justdeeevin/nix-config"; }
     { name = "theholytachanka"; site = "https://theholytachanka.com"; config = "https://github.com/ilovethensa/homelab"; }
+    { name = "sioodmy"; site = "https://sioodmy.dev"; config = "https://github.com/sioodmy/dotfiles"; }  
 ]
