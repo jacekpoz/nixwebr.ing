@@ -78,7 +78,7 @@ in {
 
         ${h2 "support"}
         <p>
-          if you don't know how to / can't make a PR for some reason feel free to <a href="https://poz.pet/contact.html">contact me</a>, I can add you to the webring myself
+          if you don't know how to / can't make a PR for some reason feel free to <a href="https://poz.pet/profiles.html">contact me</a>, I can add you to the webring myself
         </p>
       </body>
     </html>
