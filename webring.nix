@@ -21,4 +21,5 @@
     { name = "maydayv7"; site = "https://maydayv7.site"; config = "https://github.com/maydayv7/dotfiles"; }
     { name = "mimvoid"; site = "https://mimvoid.neocities.org"; config = "https://github.com/mimvoid/nix-config"; }
     { name = "bricked"; site = "https://bricked.dev"; config = "https://nixdots.bricked.dev"; }
+    { name = "edvardsire"; site = "https://edvardsire.com/"; config = "https://github.com/edvardsire/nixconfig"; }
 ]
