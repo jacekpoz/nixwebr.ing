@@ -8,7 +8,7 @@
   
   src = ./.;
 
-  cargoHash = "sha256-0MKkHkgTHM9LbaoDyqVMhCkIAtmSN8CBpM9v9bp5u3U=";
+  cargoHash = "sha256-Yx86reMsrs1xx3jWAg4j0vLZc9N4+CJgCgFLTUPpfwo=";
 
   meta = {
     description = "Backend for the nix webring";
