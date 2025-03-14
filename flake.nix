@@ -20,15 +20,11 @@
       system: let
         pkgs = pkgsForEach.${system};
       in {
-        site = import ./site/default.nix {
-          inherit pkgs webringMembers;
-          inherit (pkgs) jetbrains-mono lib writeText;
+        site = pkgs.callPackage ./site/default.nix {
           inherit (nte.functions.${system}) mkNteDerivation;
+          inherit webringMembers;
         };
-        server = import ./server/default.nix {
-          inherit pkgs;
-          inherit (pkgs) rustPlatform;
-        };
+        server = pkgs.callPackage ./server/default.nix { };
       }
     );
     devShells = forEachSystem (

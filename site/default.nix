@@ -41,4 +41,12 @@ in mkNteDerivation {
         destination = "/webring.json";
     }
   ];
+
+  meta = {
+    description = "Frontend for the nix webring";
+    homepage = "https://nixwebr.ing";
+    license = lib.licenses.agpl3Plus;
+    platforms = lib.platforms.linux;
+    maintainers = [ lib.maintainers.jacekpoz ];
+  };
 }
