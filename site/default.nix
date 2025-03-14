@@ -20,7 +20,7 @@
     value = text: h n text;
   }) [ 1 2 3 4 5 6 ]);
 in mkNteDerivation {
-  name = "nix-webring-site";
+  name = "nixwebring-site";
   version = "0.1.0";
   src = ./.;
 

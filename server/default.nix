@@ -1,6 +1,6 @@
 {rustPlatform, ...}:
 rustPlatform.buildRustPackage {
-  pname = "nix-webring-server";
+  pname = "nixwebring-server";
   version = "0.1.0";
   
   src = ./.;
